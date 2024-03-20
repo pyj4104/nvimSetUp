@@ -11,7 +11,7 @@ return {
 		keys = {
 			{
 				'<leader>e',
-				'<CMD>Neotree<CR>',
+				'<CMD>Neotree toggle<CR>',
 				desc = 'NeoTree'
 			},
 		}

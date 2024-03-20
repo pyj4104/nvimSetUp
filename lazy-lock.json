@@ -1,5 +1,6 @@
 {
   "catppuccin": { "branch": "main", "commit": "045e3499d9ec8d84635fb08877ae44fd33f6a38d" },
+  "goyo.vim": { "branch": "master", "commit": "fa0263d456dd43f5926484d1c4c7022dfcb21ba9" },
   "lazy.nvim": { "branch": "main", "commit": "83493db50a434a4c5c648faf41e2ead80f96e478" },
   "lualine.nvim": { "branch": "master", "commit": "af4c3cf17206810880d2a93562e0a4c0d901c684" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "82c7cb08ddb836ad938b2708e50085f12a8825d2" },

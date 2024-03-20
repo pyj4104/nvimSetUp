@@ -26,7 +26,7 @@ return {
 					'marksman',
 					'jedi_language_server',
 					'sqlls',
-					'rust_analyzer'
+					'rust_analyzer',
 				}
 			})
 		end

@@ -95,7 +95,17 @@ return {
 			},
 			mappings = {
 				['<leader>s'] = { name = 'Search Commands' },
-				['<leader>l'] = { '<cmd>Lazy<CR>', 'Lazy' }, 
+				['<leader>l'] = { '<CMD>Lazy<CR>', 'Lazy' }, 
+				['<leader>w'] = { '<C-w>', 'Windews' },
+				['<leader>b'] = { name = 'Buffers' },
+				['<leader>c'] = { name = 'Coding' },
+				['<leader>g'] = { name = 'git' },
+				['<leader>bL'] = { '<CMD>buffers<CR>', 'List Buffers' },
+				['<leader>bd'] = { '<CMD>bd<CR>', 'Close Current Buffer' },
+				['<leader>bn'] = { '<CMD>bnext<CR>', 'Next Buffer' },
+				['<leader>bp'] = { '<CMD>bprev<CR>', 'Previous Buffer' },
+				['<leader>bf'] = { '<CMD>bfirst<CR>', 'First Buffer' },
+				['<leader>bl'] = { '<CMD>blast<CR>', 'Last Buffer' },
 			},
 			defaults = {
 			}

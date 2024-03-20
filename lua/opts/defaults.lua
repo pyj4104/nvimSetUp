@@ -7,4 +7,7 @@ vim.cmd('set foldmethod=indent')
 vim.cmd('set nofoldenable')
 vim.cmd('set number')
 vim.cmd('set relativenumber')
+vim.cmd('set linebreak')
+vim.cmd('set hidden')
+vim.cmd('set nowrap')
 vim.g.mapleader = ' '
