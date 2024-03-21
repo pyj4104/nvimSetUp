@@ -21,10 +21,8 @@ return {
 					"omnisharp",
 					"gopls",
 					"html",
-					"biome",
 					"texlab",
 					'marksman',
-					'jedi_language_server',
 					'sqlls',
 					'rust_analyzer',
 				}
