@@ -11,3 +11,4 @@ vim.cmd('set linebreak')
 vim.cmd('set hidden')
 vim.cmd('set nowrap')
 vim.g.mapleader = ' '
+vim.g.python3_host_prog = 'python3'

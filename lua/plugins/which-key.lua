@@ -1,7 +1,7 @@
 return {
 	{
 		'folke/which-key.nvim',
-		event = 'VeryLazy',
+		tag = "v1.4.3",
 		init = function()
 			vim.o.timeout = true
 			vim.o.timeoutlen = 300
@@ -95,11 +95,14 @@ return {
 			},
 			mappings = {
 				['<leader>s'] = { name = 'Search Commands' },
-				['<leader>l'] = { '<CMD>Lazy<CR>', 'Lazy' }, 
-				['<leader>w'] = { '<C-w>', 'Windews' },
 				['<leader>b'] = { name = 'Buffers' },
 				['<leader>c'] = { name = 'Coding' },
-				['<leader>g'] = { name = 'git' },
+				['<leader>g'] = { name = 'Git' },
+				['<leader>m'] = { name = 'Messages' },
+				['<leader>md'] = { name = 'Dismiss Messages' },
+				['<leader>cw'] = { name = 'Workspace' },
+				['<leader>l'] = { '<CMD>Lazy<CR>', 'Lazy' },
+				['<leader>w'] = { '<C-w>', 'Windows' },
 				['<leader>bL'] = { '<CMD>buffers<CR>', 'List Buffers' },
 				['<leader>bd'] = { '<CMD>bd<CR>', 'Close Current Buffer' },
 				['<leader>bn'] = { '<CMD>bnext<CR>', 'Next Buffer' },
