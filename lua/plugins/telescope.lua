@@ -8,14 +8,14 @@ return {
 		},
 		keys = {
 			{
-				'<leader>sf',
+				'<leader>ff',
 				function()
 					require('telescope.builtin').find_files()
 				end,
 				desc = 'Find Files'
 			},
 			{
-				'<leader>sg',
+				'<leader>fg',
 				function()
 					--require('telescope.builtin').extensions.live_grep_args.live_grep_args()
 					require('telescope.builtin').live_grep()
