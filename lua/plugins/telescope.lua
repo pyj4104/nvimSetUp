@@ -1,7 +1,6 @@
 return {
 	{
 		'nvim-telescope/telescope.nvim',
-		lazy = true,
 		dependencies = {
 			{
 				'nvim-lua/plenary.nvim'
@@ -24,14 +23,26 @@ return {
 				desc = 'Live Grep'
 			},
 		},
-		opts = {
-			defaults = {
-				layout_strategy = 'horizontal',
-				layout_config = { prompt_position = 'top' },
-				sorting_strategy = 'ascending',
-				winblend = 0,
-			},
-		},
+		config = function()
+			local telescope = require("telescope")
+			local actions = require("telescope.actions")
+			telescope.setup({
+				defaults = {
+					layout_strategy = 'horizontal',
+					layout_config = { prompt_position = 'top' },
+					sorting_strategy = 'ascending',
+					winblend = 0,
+					mappings = {
+						i = {
+							["<Tab>"] = actions.select_tab
+						},
+						n = {
+							["<Tab>"] = actions.select_tab
+						}
+					}
+				},
+			})
+		end
 	},
 	{
 		'nvim-telescope/telescope-ui-select.nvim',

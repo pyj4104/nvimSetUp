@@ -22,8 +22,8 @@ return {
 					text_objects = true, -- help for text objects triggered after entering an operator
 					windows = true, -- default bindings on <c-w>
 					nav = true, -- misc bindings to work with windows
-					z = true, -- bindings for folds, spelling and others prefixed with z
-					g = true, -- bindings for prefixed with g
+					z = false, -- bindings for folds, spelling and others prefixed with z
+					g = false, -- bindings for prefixed with g
 				},
 			},
 			-- add operators that will trigger motion and text object completion
@@ -95,20 +95,23 @@ return {
 			},
 			mappings = {
 				['<leader>s'] = { name = 'Search Commands' },
-				['<leader>b'] = { name = 'Buffers' },
-				['<leader>c'] = { name = 'Coding' },
 				['<leader>g'] = { name = 'Git' },
 				['<leader>m'] = { name = 'Messages' },
 				['<leader>md'] = { name = 'Dismiss Messages' },
+				['<leader>c'] = { name = 'Coding' },
 				['<leader>cw'] = { name = 'Workspace' },
+				['<leader>p'] = { name = 'Persistent Session' },
 				['<leader>l'] = { '<CMD>Lazy<CR>', 'Lazy' },
-				['<leader>w'] = { '<C-w>', 'Windows' },
+				['<leader>b'] = { name = 'Buffers' },
 				['<leader>bL'] = { '<CMD>buffers<CR>', 'List Buffers' },
 				['<leader>bd'] = { '<CMD>bd<CR>', 'Close Current Buffer' },
 				['<leader>bn'] = { '<CMD>bnext<CR>', 'Next Buffer' },
 				['<leader>bp'] = { '<CMD>bprev<CR>', 'Previous Buffer' },
 				['<leader>bf'] = { '<CMD>bfirst<CR>', 'First Buffer' },
 				['<leader>bl'] = { '<CMD>blast<CR>', 'Last Buffer' },
+				['<leader>w'] = { '<C-w>', 'Windows' },
+				['<leader>w|'] = { '<CMD>vsplit<CR>', 'Split Window to Left' },
+				['<leader>w-'] = { '<CMD>split<CR>', 'Split Window to Below' },
 			},
 			defaults = {
 			}

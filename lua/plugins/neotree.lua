@@ -11,9 +11,19 @@ return {
 		keys = {
 			{
 				'<leader>e',
-				'<CMD>Neotree toggle<CR>',
+				'<CMD>Neotree position=current<CR>',
 				desc = 'NeoTree'
 			},
+		},
+		opts = {
+			event_handlers = {
+				{
+					event = "file_opened",
+					handler = function(file_path)
+						require("neo-tree.command").execute({ action = "close" })
+					end
+				},
+			}
 		}
 	}
 }
