@@ -32,32 +32,32 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local cap = require('cmp_nvim_lsp').default_capabilities()
+			local cap = require("cmp_nvim_lsp").default_capabilities()
 
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
-				capabilites = cap
+				capabilites = cap,
 			})
 			lspconfig.omnisharp.setup({
-				capabilities = cap
+				capabilities = cap,
 			})
 			lspconfig.gopls.setup({
-				capabilities = cap
+				capabilities = cap,
 			})
 			lspconfig.html.setup({
-				capabilities = cap
+				capabilities = cap,
 			})
 			lspconfig.texlab.setup({
-				capabilities = cap
+				capabilities = cap,
 			})
 			lspconfig.marksman.setup({
-				capabilities = cap
+				capabilities = cap,
 			})
 			lspconfig.sqlls.setup({
-				capabilities = cap
+				capabilities = cap,
 			})
 			lspconfig.rust_analyzer.setup({
-				capabilities = cap
+				capabilities = cap,
 			})
 
 			vim.api.nvim_create_autocmd("LspAttach", {
@@ -104,6 +104,22 @@ return {
 					vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, addDescription("Rename"))
 					vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, addDescription("Code Action"))
 					vim.keymap.set("n", "gr", vim.lsp.buf.references, addDescription("Go to References"))
+					vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+
+					-- diagnostic
+					local diagnostic_goto = function(next, severity)
+						local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
+						severity = severity and vim.diagnostic.severity[severity] or nil
+						return function()
+							go({ severity = severity })
+						end
+					end
+					vim.keymap.set("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
+					vim.keymap.set("n", "[d", diagnostic_goto(false), { desc = "Prev Diagnostic" })
+					vim.keymap.set("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
+					vim.keymap.set("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
+					vim.keymap.set("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
+					vim.keymap.set("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
 				end,
 			})
 		end,
