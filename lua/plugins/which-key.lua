@@ -95,6 +95,7 @@ return {
 			},
 			mappings = {
 				mode = { "n", "v" },
+				["<leader>d"] = { name = "Debug" },
 				["<leader>f"] = { name = "Find" },
 				["<leader>g"] = { name = "Git" },
 				["<leader>m"] = { name = "Messages" },
