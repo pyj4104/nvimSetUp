@@ -43,6 +43,15 @@ return {
 			})
 			lspconfig.gopls.setup({
 				capabilities = cap,
+				settings = {
+					gopls = {
+						completeUnimported = true,
+						usePlaceholders = true,
+						analyses = {
+							unusedparams = true
+						}
+					}
+				}
 			})
 			lspconfig.html.setup({
 				capabilities = cap,
