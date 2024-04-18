@@ -60,10 +60,7 @@ return {
 				}, {
 					{ name = "nvim_lsp" },
 				}, {
-					{ name = "buffer" },
-					option = {
-						keyword_length = 3
-					}
+					{ name = "buffer" }
 				}),
 			})
 		end,
